@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Castanea Project</title>
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!-- friconix -->
+    <script defer src="https://friconix.com/cdn/friconix.js"></script>
+  </head>
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a href="#home" id="projectName">Castanea Project</a>
+	<img id="castanea-img2" src="{{ url_for('static', filename='castanea_leaf2.png') }}" alt="">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="#intro">Bemutatkozás</a>
+            <a class="nav-item nav-link" href="#services">Szolgáltatások</a>
+            <a class="nav-item nav-link" href="#contact">Kapcsolat</a>
+            <a class="nav-item nav-link" href="#about">Rólam</a>
+          </div>
+        </div>
+      </nav>
+    <section id="home">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-10 col-md-3">
+		<img id="castanea-img" src="{{ url_for('static', filename='castanea_leaf.png') }}" alt="">
+        </div>
+        <div class="col-10 col-md-7" id="welcomeTextHolder">
+          <div class="welcome-text">
+            Informatikai szolgáltatások<br>az agrárium számára
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="intro">
+      <div class="container">
+        <div class="row justify-content-around">
+          <div class="col-10" id="servicesTitle">
+            Bemutatkozás
+          </div>
+        </div>
+        <div class="row justify-content-around">
+          <div class="col-10" id="servicesSubTitle">
+            Elsősorban a mezőgazdasági, kertészeti, erdészeti, faipari, biológiai, kutatási területen tevékenykedő vagy épp induló vállalkozásokkal dolgozunk, akik számára fontos, hogy a modern kornak megfelelő online jelenléttel és infrastruktúrával rendelkezzenek. <br><br>
+            Akik az adataik gyűjtését és elemzését fontosnak tartják.<br><br>
+            Akik mindehhez egy felkészült programozóval szeretnének dolgozni, aki agrár területen is végzett tanulmányokat és szerzett releváns tapasztalatot, így közös nyelvet beszélünk.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="row justify-content-around">
+          <div class="col-10" id="servicesSubTitle2">
+            Szolgáltatások
+          </div>
+        </div>
+        <div class="row justify-content-around">
+          <div class="col-10 col-sm-5 col-lg-2">
+            Webfejlesztés
+          </div>
+          <div class="col-10 col-sm-5 col-lg-2">
+            Adatelemzés, mesterséges intelligencia
+          </div>
+          <div class="col-10 col-sm-5 col-lg-2">
+            Folyamat-automatizálás
+          </div>
+          <div class="col-10 col-sm-5 col-lg-2">
+            Továbbképzés
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+    
+      <center>
+	      <h3>Köszönjük!</h3>
+        <p>Üzenetedet megkaptuk, hamarosan válaszolni fogunk.</p>
+      </center>
+    
+      <h2>Kapcsolat, Árajánlatkérés</h2>
+      <form class="form" action="" method="post">
+    
+        <div class="userdata">
+          <div class="name">
+            <label for="name">Név</label><br>
+            <input type="text" name="name" value="" required>
+          </div>
+          <div class="email">
+            <label for="email">Email cím</label><br>
+            <input type="email" name="email" value="" required>
+          </div>
+        </div>
+        <div class="subject">
+          <label for="subject">Tárgy</label><br>
+          <input type="text" name="subject" value="" required>
+        </div>
+        <div class="message">
+          <label for="message">Üzenet</label><br>
+          <textarea name="message" id="" cols="60" rows="10" required></textarea>
+        </div>
+        <div class="button">
+          <button type="submit" name="button">Küldés</button>
+        </div>
+      </form>
+    
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col" id="aboutTitle">
+            <h3>Pataki Bálint, a Castanea Project alapítója</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-md-4">
+		  <img id="myimg" src="{{ url_for('static', filename='IMG_01.jpg') }}" alt="">
+          </div>
+          <div class="col-xs-12 col-md-8">
+            <p>Mérnök, közgazdász, programozó vagyok. Adatelemzéssel, folyamat-automatizálásával és webfejlesztéssel foglalkozom.<br>
+            Okleveles erdőmérnökként pályafutásomat egy német kutatóintézetnél kezdtem, ahol nagy mennyiségű adat statisztikai elemzésével foglalkoztunk. <br>
+            Azóta dolgoztam multinacionális cégnél, kisvállalatnál és állami intézményben is.<br><br>
+            Azért hoztam létre ezt a projektet, hogy minél több agrárvállalkozást tudjak segíteni az online megjelenésben, valamint folyamatainak fejlesztésében, digitalizálásában.<br>
+            Fontosnak tartom az adatokon alapuló döntéshozatalt, amelyhez elengedhetetlen azok rendszerezése, megjelenítése és kontextusba helyezése, amelyben szintén állok rendelkezésre. <br><br>
+            Ültem már a másik oldalon és megtapasztaltam, milyen problémákat okozhat az, amikor az ügyfél és a külsős informatikus nem egy nyelvet beszélnek. <br>
+            Keressen bátran, ha olyan programozóval szeretne dolgozni, aki a mezőgazdasági kérdésekben is otthonosan mozog.
+
+          </div>
+      </div>
+    </section>
+  </body>
+</html>
